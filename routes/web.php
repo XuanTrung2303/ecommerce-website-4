@@ -23,7 +23,7 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 Route::prefix('admin')->middleware(['auth', 'isAdmin'])->group(function () {
 
-    Route::get('dashboard', [App\Http\Controllers\Admin\DashboardController::class, 'index']);
+    Route::get('/dashboard', [App\Http\Controllers\Admin\DashboardController::class, 'index']);
 
     // Category Routes
     Route::controller(App\Http\Controllers\Admin\CategoryController::class)->group(function () {
@@ -33,4 +33,7 @@ Route::prefix('admin')->middleware(['auth', 'isAdmin'])->group(function () {
         Route::get('/category/{category}/edit', 'edit');
         Route::put('/category/{category}', 'update');
     });
+
+    // Brand Routes
+    Route::get('/brands', App\Http\Livewire\Admin\Brand\Index::class);
 });
