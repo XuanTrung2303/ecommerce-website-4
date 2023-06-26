@@ -24,26 +24,9 @@
             </div>
         </li>
         <li class="nav-item">
-            <a class="nav-link" data-bs-toggle="collapse" href="#ui-basic" aria-expanded="false"
-                aria-controls="ui-basic">
-                <i class="mdi mdi-view-headline menu-icon"></i>
-                <span class="menu-title">Product</span>
-                <i class="menu-arrow"></i>
-            </a>
-            <div class="collapse" id="ui-basic">
-                <ul class="nav flex-column sub-menu">
-                    <li class="nav-item"> <a class="nav-link" href="{{ asset('admin/category') }}">View Product</a>
-                    </li>
-                    <li class="nav-item"> <a class="nav-link" href="{{ asset('admin/category/create') }}">Add
-                            Product</a>
-                    </li>
-                </ul>
-            </div>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="pages/charts/chartjs.html">
+            <a class="nav-link" href="{{ asset('admin/brands') }}">
                 <i class="mdi mdi-chart-pie menu-icon"></i>
-                <span class="menu-title">Charts</span>
+                <span class="menu-title">Brands</span>
             </a>
         </li>
         <li class="nav-item">
