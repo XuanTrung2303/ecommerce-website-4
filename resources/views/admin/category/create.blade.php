@@ -7,7 +7,7 @@
                 <div class="card-header">
                     <h3>
                         Add Category
-                        <a href="{{ url('admin/category') }}" class="btn btn-danger btn-sm float-end">Back</a>
+                        <a href="{{ url('admin/category') }}" class="btn btn-danger text-white btn-sm float-end">Back</a>
                     </h3>
                 </div>
                 <div class="card-body">
@@ -74,7 +74,7 @@
                                 @enderror
                             </div>
                             <div class="col-md-12 mb-3">
-                                <button type="submit" class="btn btn-success float-end">Save</button>
+                                <button type="submit" class="btn btn-primary text-white float-end">Save</button>
                             </div>
                         </div>
                     </form>

@@ -13,8 +13,9 @@
                         <h6>Are you sure you want to delete this data?</h6>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                        <button type="submit" class="btn btn-primary">Yes. Delete</button>
+                        <button type="button" class="btn btn-secondary text-white"
+                            data-bs-dismiss="modal">Close</button>
+                        <button type="submit" class="btn btn-primary text-white">Yes. Delete</button>
                     </div>
                 </form>
             </div>
@@ -30,7 +31,8 @@
                 <div class="card-header">
                     <h3>
                         Category
-                        <a href="{{ url('admin/category/create') }}" class="btn btn-primary btn-sm float-end">Add
+                        <a href="{{ url('admin/category/create') }}"
+                            class="btn btn-primary text-white btn-sm float-end">Add
                             Category</a>
                     </h3>
                 </div>
@@ -55,10 +57,10 @@
                                     <td>{{ $category->status == '1' ? 'Hidden' : 'Visible' }}</td>
                                     <td>
                                         <a href="{{ url('admin/category/' . $category->id . '/edit') }}"
-                                            class="btn btn-success">Edit</a>
+                                            class="btn btn-success text-white">Edit</a>
                                         <a href="#" wire:click="deleteCategory({{ $category->id }})"
                                             data-bs-toggle="modal" data-bs-target="#deleteModal"
-                                            class="btn btn-danger">Delete</a>
+                                            class="btn btn-danger text-white">Delete</a>
                                     </td>
                                 </tr>
                             @endforeach

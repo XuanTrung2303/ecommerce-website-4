@@ -7,7 +7,7 @@
                 <div class="card-header">
                     <h3>
                         Add Product
-                        <a href="{{ url('admin/products') }}" class="btn btn-danger btn-sm float-end">Back</a>
+                        <a href="{{ url('admin/products') }}" class="btn btn-danger text-white btn-sm float-end">Back</a>
                     </h3>
                 </div>
                 <div class="card-body">
@@ -138,8 +138,8 @@
                                     <input type="file" name="image[]" multiple class="form-control">
                                 </div>
                             </div>
-                            <div>
-                                <button type="submit" class="btn btn-primary">Submit</button>
+                            <div class="col-md-12 mb-3">
+                                <button type="submit" class="btn btn-primary text-white float-end">Save</button>
                             </div>
                     </form>
                 </div>
