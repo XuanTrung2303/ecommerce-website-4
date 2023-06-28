@@ -31,7 +31,7 @@
                                 {{ $color->status == '1' ? 'checked' : '' }}>Checked=Hidden,UnChecked=Visible
                         </div>
                         <div class="mb-3">
-                            <button type="submit" class="btn btn-success text-white">Update</button>
+                            <button type="submit" class="btn btn-success text-white float-end">Update</button>
                         </div>
                     </form>
                 </div>

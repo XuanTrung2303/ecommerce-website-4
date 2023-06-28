@@ -78,7 +78,7 @@
                                 @enderror
                             </div>
                             <div class="col-md-12 mb-3">
-                                <button type="submit" class="btn btn-success text-white float-end">Save</button>
+                                <button type="submit" class="btn btn-success text-white float-end">Update</button>
                             </div>
                         </div>
                     </form>
