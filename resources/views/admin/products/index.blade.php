@@ -10,7 +10,8 @@
                 <div class="card-header">
                     <h3>
                         List Products
-                        <a href="{{ url('admin/products/create') }}" class="btn btn-primary btn-sm float-end">Add Product</a>
+                        <a href="{{ url('admin/products/create') }}" class="btn btn-primary text-white btn-sm float-end">Add
+                            Product</a>
                     </h3>
                 </div>
                 <div class="card-body">
@@ -43,10 +44,10 @@
                                     <td>{{ $product->status == '1' ? 'Hidden' : 'Visible' }}</td>
                                     <td>
                                         <a href="{{ url('admin/products/' . $product->id . '/edit') }}"
-                                            class="btn btn-sm btn-success">Edit</a>
+                                            class="btn btn-sm btn-success text-white">Edit</a>
                                         <a href="{{ url('admin/products/' . $product->id . '/delete') }}"
                                             onclick="return confirm('Are you sure, you want to delete this data ?')"
-                                            class="btn btn-sm btn-danger">Delete</a>
+                                            class="btn btn-sm btn-danger text-white">Delete</a>
                                     </td>
                                 </tr>
                             </tbody>

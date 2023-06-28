@@ -47,6 +47,12 @@
             </div>
         </li>
         <li class="nav-item">
+            <a class="nav-link" href="{{ asset('admin/colors') }}">
+                <i class="mdi mdi-chart-pie menu-icon"></i>
+                <span class="menu-title">Colors</span>
+            </a>
+        </li>
+        <li class="nav-item">
             <a class="nav-link" href="pages/tables/basic-table.html">
                 <i class="mdi mdi-grid-large menu-icon"></i>
                 <span class="menu-title">Tables</span>

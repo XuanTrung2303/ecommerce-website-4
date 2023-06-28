@@ -9,7 +9,7 @@
                     <h3>
                         Brands List
                         <a href="#" data-bs-toggle="modal" data-bs-target="#addBrandModal"
-                            class="btn btn-primary btn-sm float-end">Add Brand</a>
+                            class="btn btn-primary btn-sm text-white float-end">Add Brand</a>
                     </h3>
                 </div>
                 <div class="card-body">
@@ -34,10 +34,10 @@
 
                                         <a href="#" wire:click="editBrand({{ $brand->id }})"
                                             data-bs-toggle="modal" data-bs-target="#updateBrandModal"
-                                            class="btn btn-sm btn-success">Edit</a>
+                                            class="btn btn-sm text-white btn-success">Edit</a>
                                         <a href="#" wire:click="deleteBrand({{ $brand->id }})"
                                             data-bs-toggle="modal" data-bs-target="#deleteBrandModal"
-                                            class="btn btn-sm btn-danger">Delete</a>
+                                            class="btn btn-sm text-white btn-danger">Delete</a>
                                     </td>
                                 </tr>
                             @empty

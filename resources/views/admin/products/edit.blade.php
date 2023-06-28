@@ -7,7 +7,7 @@
                 <div class="card-header">
                     <h3>
                         Edit Product
-                        <a href="{{ url('admin/products') }}" class="btn btn-danger btn-sm float-end">Back</a>
+                        <a href="{{ url('admin/products') }}" class="btn btn-danger text-white btn-sm float-end">Back</a>
                     </h3>
                 </div>
                 <div class="card-body">
@@ -133,7 +133,7 @@
                                         <div class="mb-3">
                                             <label>Trending</label>
                                             <input type="checkbox" name="trending"
-                                                value="{{ $product->trending == '1' ? 'checked' : '' }}"
+                                                {{ $product->trending == '1' ? 'checked' : '' }}
                                                 style="width: 50px; height:50px;">
                                         </div>
                                     </div>
@@ -141,7 +141,7 @@
                                         <div class="mb-3">
                                             <label>Status</label>
                                             <input type="checkbox" name="status"
-                                                value="{{ $product->status == '1' ? 'checked' : '' }}"
+                                                {{ $product->status == '1' ? 'checked' : '' }}
                                                 style="width: 50px; height:50px;">
                                         </div>
                                     </div>
@@ -172,7 +172,7 @@
                                 </div>
                             </div>
                             <div>
-                                <button type="submit" class="btn btn-primary">Update</button>
+                                <button type="submit" class="btn btn-primary text-white">Update</button>
                             </div>
                     </form>
                 </div>
