@@ -30,9 +30,9 @@ Route::prefix('admin')->middleware(['auth', 'isAdmin'])->group(function () {
         Route::get('/sliders', 'index');
         Route::get('/sliders/create', 'create');
         Route::post('/sliders', 'store');
-        // Route::get('/colors/{color}/edit', 'edit');
-        // Route::put('/colors/{color_id}', 'update');
-        // Route::get('colors/{color_id}/delete', 'destroy');
+        Route::get('/sliders/{slider}/edit', 'edit');
+        Route::put('/sliders/{slider}', 'update');
+        Route::get('sliders/{slider}/delete', 'destroy');
     });
 
     // Category Routes
