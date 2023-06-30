@@ -9,7 +9,7 @@
         <li class="nav-item">
             <a class="nav-link" data-bs-toggle="collapse" href="#ui-basic" aria-expanded="false"
                 aria-controls="ui-basic">
-                <i class="mdi mdi-circle-outline menu-icon"></i>
+                <i class="mdi mdi-emoticon menu-icon"></i>
                 <span class="menu-title">Category</span>
                 <i class="menu-arrow"></i>
             </a>
@@ -32,7 +32,7 @@
         <li class="nav-item">
             <a class="nav-link" data-bs-toggle="collapse" href="#products" aria-expanded="false"
                 aria-controls="products">
-                <i class="mdi mdi-circle-outline menu-icon"></i>
+                <i class="mdi mdi-file-document-box-outline menu-icon"></i>
                 <span class="menu-title">Product</span>
                 <i class="menu-arrow"></i>
             </a>
@@ -58,7 +58,7 @@
                 <span class="menu-title">Home Slider</span>
             </a>
         </li>
-        <li class="nav-item">
+        {{-- <li class="nav-item">
             <a class="nav-link" href="pages/icons/mdi.html">
                 <i class="mdi mdi-emoticon menu-icon"></i>
                 <span class="menu-title">Icons</span>
@@ -86,6 +86,6 @@
                 <i class="mdi mdi-file-document-box-outline menu-icon"></i>
                 <span class="menu-title">Documentation</span>
             </a>
-        </li>
+        </li> --}}
     </ul>
 </nav>
