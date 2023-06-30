@@ -52,8 +52,8 @@
                                 <tr>
                                     <td>{{ $category->id }}</td>
                                     <td>{{ $category->name }}</td>
-                                    <td><img src="{{ asset('uploads/category/' . $category->image) }}" width="60px"
-                                            height="60px"></td>
+                                    <td><img src="{{ asset("$category->image") }}" width="60px" height="60px">
+                                    </td>
                                     <td>{{ $category->status == '1' ? 'Hidden' : 'Visible' }}</td>
                                     <td>
                                         <a href="{{ url('admin/category/' . $category->id . '/edit') }}"
