@@ -140,8 +140,7 @@ class ProductController extends Controller
     public function update(ProductFormRequest $request, int $product_id)
     {
         $validatedData = $request->validated();
-        $product = Category::findOrFail($validatedData['category_id'])
-            ->products()->where('id', $product_id)->first();
+        $product = Product::where('id', $product_id)->first();
 
         if ($product) {
             $product->update([
@@ -183,7 +182,7 @@ class ProductController extends Controller
                     $product->productColors()->create([
                         'product_id' => $product->id,
                         'color_id' => $color,
-                        'quantity' => $request->colorquantity[$key] ?? 0
+                        'quantity' => $request->quantity[$key] ?? 0
                     ]);
                 }
             }
