@@ -64,7 +64,6 @@
                                     <span class="original-price">${{ $productItem->original_price }}</span>
                                 </div>
                                 <div class="mt-2">
-                                    <a href="" class="btn btn1">Add To Cart</a>
                                     <a href="{{ url('/collections/' . $productItem->category->slug . '/' . $productItem->slug) }}"
                                         class="btn btn1"> View </a>
                                 </div>
