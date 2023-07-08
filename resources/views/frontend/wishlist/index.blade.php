@@ -3,5 +3,5 @@
 @section('title', 'Wishlist')
 
 @section('content')
-    <livewire:frontend.wishlist-show />
+    <livewire:frontend.wishlist.wishlist-show />
 @endsection
