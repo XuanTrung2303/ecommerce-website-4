@@ -28,7 +28,7 @@ Route::prefix('/')->group(function () {
     Route::middleware(['auth'])->group(function () {
         Route::get('wishlist', [App\Http\Controllers\Frontend\WishlistController::class, 'index']);
         Route::get('cart', [App\Http\Controllers\Frontend\CartController::class, 'index']);
-        Route::get('checkout', [App\Http\Controllers\Frontend\FrontendController::class, 'index']);
+        Route::get('checkout', [App\Http\Controllers\Frontend\CheckoutController::class, 'index']);
     });
 
     Route::get('thank-you', [App\Http\Controllers\Frontend\FrontendController::class, 'thankyou']);
