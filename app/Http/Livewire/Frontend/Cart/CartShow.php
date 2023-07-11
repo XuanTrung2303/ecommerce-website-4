@@ -7,7 +7,7 @@ use Livewire\Component;
 
 class CartShow extends Component
 {
-    public $cart, $quantityCount;
+    public $cart, $totalPrice = 0;
 
     public function decrementQuantity(int $cartId)
     {
