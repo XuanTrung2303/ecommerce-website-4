@@ -37,8 +37,6 @@
                             @if ($product->productColors->count() > 0)
                                 @if ($product->productColors)
                                     @foreach ($product->productColors as $colorItem)
-                                        {{-- <input type="radio" name="colorSelection" value="{{ $colorItem->id }}" />
-                                        {{ $colorItem->color->name }} --}}
                                         <label class="btn-sm py-1 mt-2 text-white colorSelectionLabel"
                                             style="background-color: {{ $colorItem->color->code }}"
                                             wire:click="colorSelected({{ $colorItem->id }})">
