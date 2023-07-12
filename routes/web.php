@@ -20,10 +20,13 @@ use Illuminate\Support\Facades\Route;
 Auth::routes();
 
 Route::prefix('/')->group(function () {
-    Route::get('', [App\Http\Controllers\Frontend\FrontendController::class, 'index'])->name('home');
-    Route::get('collections', [App\Http\Controllers\Frontend\FrontendController::class, 'categories']);
-    Route::get('collections/{category_slug}', [App\Http\Controllers\Frontend\FrontendController::class, 'products']);
-    Route::get('collections/{category_slug}/{product_slug}', [App\Http\Controllers\Frontend\FrontendController::class, 'productView']);
+    Route::controller(App\Http\Controllers\Frontend\FrontendController::class)->group(function () {
+        Route::get('', 'index')->name('home');
+        Route::get('collections', 'categories');
+        Route::get('collections/{category_slug}', 'products');
+        Route::get('collections/{category_slug}/{product_slug}', 'productView');
+        Route::get('thank-you', 'thankyou');
+    });
 
     Route::middleware(['auth'])->group(function () {
         Route::get('wishlist', [App\Http\Controllers\Frontend\WishlistController::class, 'index']);
@@ -31,7 +34,10 @@ Route::prefix('/')->group(function () {
         Route::get('checkout', [App\Http\Controllers\Frontend\CheckoutController::class, 'index']);
     });
 
-    Route::get('thank-you', [App\Http\Controllers\Frontend\FrontendController::class, 'thankyou']);
+    Route::controller(App\Http\Controllers\Frontend\OrderController::class)->group(function () {
+        Route::get('orders', 'index');
+        Route::get('orders/{orderId}', 'show');
+    });
 });
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
