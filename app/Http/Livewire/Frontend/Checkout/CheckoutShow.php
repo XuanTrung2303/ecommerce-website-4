@@ -14,6 +14,53 @@ class CheckoutShow extends Component
 
     public $fullname, $email, $phone, $pincode, $address, $payment_mode = NULL, $payment_id = NULL;
 
+
+    /**
+     * Summary of listeners
+     * @var array
+     */
+    protected $listeners = [
+        'validationForAll',
+        'transactionEmit' => 'paidOnlineOrder'
+    ];
+
+    public function paidOnlineOrder($value)
+    {
+        $this->payment_id = $value;
+        $this->payment_mode = 'Paid by Paypal';
+        $codOrder = $this->placeOrder();
+        if ($codOrder) {
+
+            Cart::where('user_id', auth()->user()->id)->delete();
+
+            session()->flash('message', 'Order Placed Successfully');
+            $this->dispatchBrowserEvent(
+                'message',
+                [
+                    'text' => 'Order Placed Successfully',
+                    'type' => 'success',
+                    'status' => 200
+                ]
+            );
+
+            return redirect()->to('thank-you');
+        } else {
+            $this->dispatchBrowserEvent(
+                'message',
+                [
+                    'text' => 'Something went wrong ',
+                    'type' => 'error',
+                    'status' => 500
+                ]
+            );
+        }
+    }
+
+    public function validationForAll()
+    {
+        $this->validate();
+    }
+
     public function rules()
     {
         return [
@@ -112,5 +159,23 @@ class CheckoutShow extends Component
         return view('livewire.frontend.checkout.checkout-show', [
             'totalProductAmount' => $this->totalProductAmount
         ]);
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getListeners()
+    {
+        return $this->listeners;
+    }
+
+    /**
+     * @param mixed $listeners
+     * @return self
+     */
+    public function setListeners($listeners): self
+    {
+        $this->listeners = $listeners;
+        return $this;
     }
 }
