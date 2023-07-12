@@ -92,7 +92,7 @@ class CheckoutShow extends Component
             $orderItems = Orderitem::create([
                 'order_id' => $order->id,
                 'product_id' => $cartItem->product_id,
-                'product_color_id' => $cartItem->prod_color_id,
+                'product_color_id' => $cartItem->product_color_id,
                 'quantity' => $cartItem->quantity,
                 'price' => $cartItem->product->selling_price,
             ]);
