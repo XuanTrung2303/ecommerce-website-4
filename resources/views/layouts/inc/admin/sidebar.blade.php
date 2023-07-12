@@ -30,6 +30,12 @@
             </a>
         </li>
         <li class="nav-item">
+            <a class="nav-link" href="{{ asset('admin/orders') }}">
+                <i class="mdi mdi-chart-pie menu-icon"></i>
+                <span class="menu-title">Orders</span>
+            </a>
+        </li>
+        <li class="nav-item">
             <a class="nav-link" data-bs-toggle="collapse" href="#products" aria-expanded="false"
                 aria-controls="products">
                 <i class="mdi mdi-file-document-box-outline menu-icon"></i>
