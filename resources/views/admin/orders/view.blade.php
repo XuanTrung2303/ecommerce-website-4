@@ -16,7 +16,7 @@
                     <div class="shadow bg-white p-3">
                         <h4 class="text-primary">
                             <i class="fa fa-shopping-cart text-dark"></i> My Order details
-                            <a href="{{ url('orders') }}" class="btn btn-danger text-white btn-sm float-end">Back</a>
+                            <a href="{{ url('/admin/orders') }}" class="btn btn-danger text-white btn-sm float-end">Back</a>
                         </h4>
                         <hr>
 
