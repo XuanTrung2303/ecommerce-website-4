@@ -69,14 +69,23 @@ class OrderController extends Controller
     }
 
     /**
-     * Show the form for editing the specified resource.
+     * updateOrderStatus the form for editing the specified resource.
      *
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function updateOrderStatus(int $orderId, Request $request)
     {
-        //
+        $order = Order::where('id', $orderId)->first();
+        if ($order) {
+
+            $order->update([
+                'status_message' => $request->order_status
+            ]);
+            return redirect('admin/orders/' . $orderId)->with('message', 'Order Status Updated');
+        } else {
+            return redirect('admin/orders/' . $orderId)->with('message', 'Order Id not found');
+        }
     }
 
     /**
