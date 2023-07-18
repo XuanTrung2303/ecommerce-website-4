@@ -22,6 +22,14 @@
                         <h4 class="text-primary">
                             <i class="fa fa-shopping-cart text-dark"></i> My Order details
                             <a href="{{ url('/admin/orders') }}" class="btn btn-danger text-white btn-sm float-end">Back</a>
+                            <a href="{{ url('/admin/invoice/' . $order->id . '/generate') }}"
+                                class="btn btn-primary text-white btn-sm float-end mx-1">
+                                Download Invoice
+                            </a>
+                            <a href="{{ url('/admin/invoice/' . $order->id) }}" target="_blank"
+                                class="btn btn-warning text-white btn-sm float-end mx-1">
+                                View Invoice
+                            </a>
                         </h4>
                         <hr>
 
