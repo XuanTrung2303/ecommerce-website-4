@@ -26,6 +26,7 @@ Route::prefix('/')->group(function () {
         Route::get('collections/{category_slug}', 'products');
         Route::get('collections/{category_slug}/{product_slug}', 'productView');
         Route::get('thank-you', 'thankyou');
+        Route::get('/new-arrivals', 'newArrival');
     });
 
     Route::middleware(['auth'])->group(function () {
@@ -53,7 +54,7 @@ Route::prefix('admin')->middleware(['auth', 'isAdmin'])->group(function () {
         Route::post('/sliders', 'store');
         Route::get('/sliders/{slider}/edit', 'edit');
         Route::put('/sliders/{slider}', 'update');
-        Route::get('sliders/{slider}/delete', 'destroy');
+        Route::get('/sliders/{slider}/delete', 'destroy');
     });
 
     // Category Routes
@@ -75,11 +76,11 @@ Route::prefix('admin')->middleware(['auth', 'isAdmin'])->group(function () {
         Route::post('/products', 'store');
         Route::get('/products/{product}/edit', 'edit');
         Route::put('/products/{product}', 'update');
-        Route::get('products/{product_id}/delete', 'destroy');
-        Route::get('product-image/{product_image_id}/delete', 'destroyImage');
+        Route::get('/products/{product_id}/delete', 'destroy');
+        Route::get('/product-image/{product_image_id}/delete', 'destroyImage');
 
-        Route::post('product-color/{prod_color_id}', 'updateProdColorQty');
-        Route::get('product-color/{prod_color_id}/delete', 'deleteProdColor');
+        Route::post('/product-color/{prod_color_id}', 'updateProdColorQty');
+        Route::get('/product-color/{prod_color_id}/delete', 'deleteProdColor');
     });
 
     // Colors Routes
@@ -89,7 +90,7 @@ Route::prefix('admin')->middleware(['auth', 'isAdmin'])->group(function () {
         Route::post('/colors', 'store');
         Route::get('/colors/{color}/edit', 'edit');
         Route::put('/colors/{color_id}', 'update');
-        Route::get('colors/{color_id}/delete', 'destroy');
+        Route::get('/colors/{color_id}/delete', 'destroy');
     });
 
     // Orders Routes

@@ -55,6 +55,12 @@ class FrontendController extends Controller
         }
     }
 
+    public function newArrival()
+    {
+        $newArrivalsProducts = Product::latest()->take(16)->get();
+        return view('frontend.pages.new-arrival', compact('newArrivalsProducts'));
+    }
+
     /**
      * Show the form for thankyou a new resource.
      *
