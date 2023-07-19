@@ -26,7 +26,8 @@ Route::prefix('/')->group(function () {
         Route::get('collections/{category_slug}', 'products');
         Route::get('collections/{category_slug}/{product_slug}', 'productView');
         Route::get('thank-you', 'thankyou');
-        Route::get('/new-arrivals', 'newArrival');
+        Route::get('new-arrivals', 'newArrival');
+        Route::get('featured-products', 'featuredProducts');
     });
 
     Route::middleware(['auth'])->group(function () {
