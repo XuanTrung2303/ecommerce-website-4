@@ -3,7 +3,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-3">
-                    <h4 class="footer-heading">">{{ $appSetting->website_name ?? 'website name' }}</h4>
+                    <h4 class="footer-heading">{{ $appSetting->website_name ?? 'website name' }}</h4>
                     <div class="footer-underline"></div>
                     <p>
                         Lorem Ipsum is simply dummy text of the printing and typesetting industry.
