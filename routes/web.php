@@ -28,6 +28,7 @@ Route::prefix('/')->group(function () {
         Route::get('thank-you', 'thankyou');
         Route::get('new-arrivals', 'newArrival');
         Route::get('featured-products', 'featuredProducts');
+        Route::get('search', 'searchProducts');
     });
 
     Route::middleware(['auth'])->group(function () {
