@@ -9,7 +9,7 @@
         <li class="nav-item">
             <a class="nav-link" data-bs-toggle="collapse" href="#ui-basic" aria-expanded="false"
                 aria-controls="ui-basic">
-                <i class="mdi mdi-emoticon menu-icon"></i>
+                <i class="mdi mdi-basket menu-icon"></i>
                 <span class="menu-title">Category</span>
                 <i class="menu-arrow"></i>
             </a>
@@ -31,7 +31,7 @@
         </li>
         <li class="nav-item">
             <a class="nav-link" href="{{ asset('admin/orders') }}">
-                <i class="mdi mdi-chart-pie menu-icon"></i>
+                <i class="mdi mdi-basket-fill menu-icon"></i>
                 <span class="menu-title">Orders</span>
             </a>
         </li>
@@ -54,7 +54,7 @@
         </li>
         <li class="nav-item">
             <a class="nav-link" href="{{ asset('admin/colors') }}">
-                <i class="mdi mdi-chart-pie menu-icon"></i>
+                <i class="mdi mdi-palette-outline menu-icon"></i>
                 <span class="menu-title">Colors</span>
             </a>
         </li>
@@ -69,6 +69,24 @@
                 <i class="mdi mdi-settings menu-icon"></i>
                 <span class="menu-title">Site Setting</span>
             </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="collapse" href="#users" aria-expanded="false" aria-controls="users">
+                <i class="mdi mdi-account menu-icon"></i>
+                <span class="menu-title">User</span>
+                <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="users">
+                <ul class="nav flex-column sub-menu">
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ asset('admin/users') }}">View User</a>
+                    </li>
+                    <li class="nav-item"> <a class="nav-link" href="{{ asset('admin/users/create') }}">
+                            Add User
+                        </a>
+                    </li>
+                </ul>
+            </div>
         </li>
     </ul>
 </nav>

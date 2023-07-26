@@ -51,11 +51,7 @@ Route::prefix('admin')->middleware(['auth', 'isAdmin'])->group(function () {
     // Setting Routes
     Route::controller(App\Http\Controllers\Admin\SettingController::class)->group(function () {
         Route::get('/settings', 'index');
-        // Route::get('/sliders/create', 'create');
         Route::post('/settings', 'store');
-        // Route::get('/sliders/{slider}/edit', 'edit');
-        // Route::put('/sliders/{slider}', 'update');
-        // Route::get('/sliders/{slider}/delete', 'destroy');
     });
 
 
@@ -113,5 +109,15 @@ Route::prefix('admin')->middleware(['auth', 'isAdmin'])->group(function () {
 
         Route::get('/invoice/{orderId}', 'viewInvoice');
         Route::get('/invoice/{orderId}/generate', 'generateInvoice');
+    });
+
+    // User Routes
+    Route::controller(App\Http\Controllers\Admin\UserController::class)->group(function () {
+        Route::get('/users', 'index');
+        Route::get('/users/create', 'create');
+        Route::post('/users', 'store');
+        Route::get('/users/{user_id}/edit', 'edit');
+        Route::put('/users/{user_id}', 'update');
+        Route::get('/users/{user_id}/delete', 'destroy');
     });
 });
