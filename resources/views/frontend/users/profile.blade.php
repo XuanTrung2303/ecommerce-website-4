@@ -8,7 +8,10 @@
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-md-10">
-                    <h4>User Profile</h4>
+                    <h4>User Profile
+                        <a href="{{ url('change-password') }}" class="btn btn-warning float-end text-white">Change Password
+                            ?</a>
+                    </h4>
                     <div class="underline"></div>
                 </div>
 
@@ -36,28 +39,28 @@
 
                                 <div class="row">
                                     <div class="col-md-6">
-                                        <div class="col-md-3">
+                                        <div class="mb-3">
                                             <label>Username</label>
                                             <input type="text" name="username" value="{{ Auth::user()->name }}"
                                                 class="form-control">
                                         </div>
                                     </div>
                                     <div class="col-md-6">
-                                        <div class="col-md-3">
+                                        <div class="mb-3">
                                             <label>Email Address</label>
                                             <input type="text" name="email" value="{{ Auth::user()->email }}" readonly
                                                 class="form-control">
                                         </div>
                                     </div>
                                     <div class="col-md-6">
-                                        <div class="col-md-3">
+                                        <div class="mb-3">
                                             <label>Phone Number</label>
                                             <input type="number" name="phone"
                                                 value="{{ Auth::user()->userDetail->phone ?? '' }}" class="form-control">
                                         </div>
                                     </div>
                                     <div class="col-md-6">
-                                        <div class="col-md-3">
+                                        <div class="mb-3">
                                             <label>Zip/Pin Code</label>
                                             <input type="text" name="pin_code"
                                                 value="{{ Auth::user()->userDetail->pin_code ?? '' }}" class="form-control">
@@ -70,7 +73,7 @@
                                         </div>
                                     </div>
                                     <div class="col-md-12">
-                                        <button type="submit" class="btn btn-primary">Save Data</button>
+                                        <button type="submit" class="btn btn-primary text-white">Save Data</button>
                                     </div>
                                 </div>
                             </form>

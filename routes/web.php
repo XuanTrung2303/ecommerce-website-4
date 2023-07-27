@@ -35,8 +35,12 @@ Route::prefix('/')->group(function () {
         Route::get('wishlist', [App\Http\Controllers\Frontend\WishlistController::class, 'index']);
         Route::get('cart', [App\Http\Controllers\Frontend\CartController::class, 'index']);
         Route::get('checkout', [App\Http\Controllers\Frontend\CheckoutController::class, 'index']);
-        Route::get('profile', [App\Http\Controllers\Frontend\UserController::class, 'index']);
-        Route::post('profile', [App\Http\Controllers\Frontend\UserController::class, 'updateUserDetails']);
+        Route::controller(App\Http\Controllers\Frontend\UserController::class)->group(function () {
+            Route::get('profile', 'index');
+            Route::post('profile', 'updateUserDetails');
+            Route::get('change-password', 'passwordCreate');
+            Route::post('change-password', 'changePassword');
+        });
     });
 
     Route::controller(App\Http\Controllers\Frontend\OrderController::class)->group(function () {
@@ -112,6 +116,7 @@ Route::prefix('admin')->middleware(['auth', 'isAdmin'])->group(function () {
 
         Route::get('/invoice/{orderId}', 'viewInvoice');
         Route::get('/invoice/{orderId}/generate', 'generateInvoice');
+        Route::get('/invoice/{orderId}/mail', 'mailInvoice');
     });
 
     // User Routes

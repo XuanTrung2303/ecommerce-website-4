@@ -21,14 +21,19 @@
                     <div class="shadow bg-white p-3">
                         <h4 class="text-primary">
                             <i class="fa fa-shopping-cart text-dark"></i> My Order details
-                            <a href="{{ url('/admin/orders') }}" class="btn btn-danger text-white btn-sm float-end">Back</a>
+                            <a href="{{ url('/admin/orders') }}" class="btn btn-danger text-white btn-sm float-end">
+                                <span class="fa fa-arrow-left"></span> Back</a>
                             <a href="{{ url('/admin/invoice/' . $order->id . '/generate') }}"
                                 class="btn btn-primary text-white btn-sm float-end mx-1">
-                                Download Invoice
+                                <span class="fa fa-download"></span> Download Invoice
                             </a>
                             <a href="{{ url('/admin/invoice/' . $order->id) }}" target="_blank"
                                 class="btn btn-warning text-white btn-sm float-end mx-1">
-                                View Invoice
+                                <span class="fa fa-eye"></span> View Invoice
+                            </a>
+                            <a href="{{ url('/admin/invoice/' . $order->id . '/mail') }}"
+                                class="btn btn-info text-white btn-sm float-end mx-1">
+                                <span class="fa fa-arrow-right"></span> Send Invoice Via Mail
                             </a>
                         </h4>
                         <hr>
