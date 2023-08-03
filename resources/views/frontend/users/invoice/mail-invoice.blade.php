@@ -105,6 +105,15 @@
 
 <body>
 
+    <div class="text-center">
+        <h2>Thank you for your Order</h2>
+        <p>
+            Thank you for pushchasing with {{ $appSetting->website_name ?? 'Gnurt Ecommerce' }},
+            <br>
+            Your order items and details are provided below.
+        </p>
+    </div>
+
     <table class="order-details">
         <thead>
             <tr>
